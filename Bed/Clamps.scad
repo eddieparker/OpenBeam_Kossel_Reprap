@@ -11,18 +11,18 @@ rotate([0,90,0])
 
 module Clamp()
 {
-difference()
-{
-	scale(gSize)
-	union()
+	difference()
 	{
-		cylinder(r=1/2, $fn=gDetail, center=true);
-		translate([0,-.25,0])
-		cube([1,.5,1], center=true);
+		scale(gSize)
+		union()
+		{
+			cylinder(r=1/2, $fn=gDetail, center=true);
+			translate([0,-.25,0])
+			cube([1,.5,1], center=true);
+		}
+		translate([0,-gSize.y/2+8,0])
+		cylinder(r=3.2,h=40, center=true, $fn=gDetail);
 	}
-	translate([0,-gSize.y/2+8,0])
-	cylinder(r=3,h=40, center=true, $fn=gDetail);
-}
 }
 
 
