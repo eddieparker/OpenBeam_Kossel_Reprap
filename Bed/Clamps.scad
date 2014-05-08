@@ -1,7 +1,4 @@
-// Work in progress towards clips to hold the 'bottom' in.  Debating making angle brackets to mount them
-// since I forgot to put nuts in the bottom of my extrusions.  Darnit.
-
-gSize=[40,60,5];
+gSize=[20,30,5];
 gDetail=200;
 
 
@@ -22,6 +19,9 @@ module Clamp()
 		}
 		translate([0,-gSize.y/2+8,0])
 		cylinder(r=3.2,h=40, center=true, $fn=gDetail);
+
+translate([0,7.50,1])
+# cube([50, gSize.y-15,3], center=true);
 	}
 }
 
